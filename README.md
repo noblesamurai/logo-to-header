@@ -16,4 +16,5 @@ $ npm install logo-to-header
 
 ``` js
 var logoToHeader = require('logo-to-header');
+logoToHeader(data, type, callback);
 ```
