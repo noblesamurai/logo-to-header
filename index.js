@@ -3,7 +3,6 @@ var IMAGE_WIDTH = 2480;
 var IMAGE_HEIGHT = 626;
 
 module.exports = function processImage(imageData, type, callback) {
-  console.log(type);
   lwip.open(imageData, type, function(err, image) {
     if (err) {
       console.error('Opening image buffer:', err, err.stack);
