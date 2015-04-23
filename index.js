@@ -1,12 +1,12 @@
-var lwip = require('lwip');
+var lwip = require('lwip'),
+    VError = require('verror');
 var IMAGE_WIDTH = 2480;
 var IMAGE_HEIGHT = 626;
 
 module.exports = function processImage(imageData, type, callback) {
   lwip.open(imageData, type, function(err, image) {
     if (err) {
-      console.error('Opening image buffer:', err, err.stack);
-      process.exit(1);
+      return callback(new VError(err, 'Opening image data failed.'));
     }
     var colour = image.getPixel(0,0);
     image.batch().
