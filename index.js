@@ -10,9 +10,9 @@ module.exports = function processImage(imageData, type, callback) {
     }
     var colour = image.getPixel(0,0);
     image.batch().
-    contain(IMAGE_HEIGHT, IMAGE_HEIGHT, colour).
-    pad(IMAGE_WIDTH - IMAGE_HEIGHT, 0, 0, 0, colour).
-    toBuffer('png', callback);
+      contain(IMAGE_HEIGHT, IMAGE_HEIGHT, colour).
+      pad(IMAGE_WIDTH - IMAGE_HEIGHT, 0, 0, 0, colour).
+      toBuffer('png', callback);
   });
 };
 
