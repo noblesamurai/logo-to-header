@@ -1,23 +1,35 @@
 {
   "name": "logo-to-header",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "engines": {
+    "node": "0.10.x"
+  },
   "description": "Given a logo and a b/g color, make a header.",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/mocha"
+    "test": "./node_modules/mocha/bin/mocha -R spec --recursive"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/timothyleslieallen/logo-to-header"
   },
-  "keywords": ["logo","header","pad","image"],
+  "keywords": [
+    "logo",
+    "header",
+    "pad",
+    "image"
+  ],
   "author": "Tim Allen <tim@noblesamurai.com>",
   "license": "BSD-3-Clause",
   "bugs": {
     "url": "https://github.com/timothyleslieallen/logo-to-header/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "lwip": "0.0.6",
+    "verror": "^1.6.0"
+  },
   "devDependencies": {
-    "expect.js": "~0.2.0",    "mocha": "~1.17.0"
+    "expect.js": "^0.3.1",
+    "mocha": "~1.17.0"
   }
 }

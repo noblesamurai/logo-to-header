@@ -1,6 +1,6 @@
 # logo-to-header
 
-Given a logo and a b/g color, make a header.
+Given a logo, make a fixed size header.
 
 [![build status](https://secure.travis-ci.org/timothyleslieallen/logo-to-header.png)](http://travis-ci.org/timothyleslieallen/logo-to-header)
 
@@ -16,4 +16,5 @@ $ npm install logo-to-header
 
 ``` js
 var logoToHeader = require('logo-to-header');
+logoToHeader(data, type, callback);
 ```
