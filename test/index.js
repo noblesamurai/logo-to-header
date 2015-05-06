@@ -7,7 +7,7 @@ describe('logo-to-header', function() {
     fs.readFile(__dirname + '/fixtures/alliance.png', function(err, data) {
       if (err) return done(err);
 
-      logoToHeader(data, 'png', expectations);
+      logoToHeader(data, 'png', { width: 2480, height: 626 }, expectations);
 
       function expectations(err, data) {
         if (err) return done(err);
